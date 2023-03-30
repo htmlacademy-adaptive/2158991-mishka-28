@@ -1,7 +1,7 @@
 # Личный проект «Мишка» 
 
 * Студент: [Anastasya Khlebnikova](https://up.htmlacademy.ru/adaptive/28/user/2158991).
-* Наставник: `Неизвестно`.
+* Наставник: `Алиса Пепел`.
 
 ---
 
