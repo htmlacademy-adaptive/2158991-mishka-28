@@ -42,85 +42,91 @@
         <p class="main-nav__text">Бесплатная доставка по России</p>
       </nav>
     </header>
-    <main class="main-container">
-      <h1 class="visually-hidden">интернет-магазин «Мишка» — изделия ручной работы</h1>
-      <section class="promo">
-        <h2 class="promo__title">Милые штуки ручной<br> работы для дома</h2>
-        <ul class="promo__list categories-list">
-          <li class="categories-list__item">
-            <a class="categories-list__link categories-list__link--interior">Предметы<br> интерьера</a>
-          </li>
-          <li class="categories-list__item">
-            <a class="categories-list__link categories-list__link--toys">Детские<br> игрушки</a>
-          </li>
-        </ul>
-      </section>
-      <section class="week-product">
-        <h2 class="week-product__title">Вязаные корзинки</h2>
-        <img class="week-product__img" src="img/tiffany-baskets.jpg" width="525" height="636" alt="Вязаные корзинки тиффани/серый.">
-        <p class="week-product__marker">Товар недели</p>
-        <p class="week-product__description">Экологически чистая пряжа,<br> ручная работа. Доступны в шести<br> расцветках и трёх размерах.</p>
-        <table class="week-product__feature table-feature">
-          <tr class="table-feature__row">
-            <td>Цвет:</td>
-            <td>тиффани/серый</td>
-          </tr>
-          <tr class="table-feature__row">
-            <td>Диаметр:</td>
-            <td>25 см</td>
-          </tr>
-          <tr class="table-feature__row">
-            <td>Высота:</td>
-            <td>15 см</td>
-          </tr>
-        </table>
-        <p class="week-product__price">Цена: 990 руб.</p>
-        <a class="week-product__button button" href="#">Заказать</a>
-      </section>
-      <section class="advantages">
-        <h2 class="advantages__title">Коротко о нас:</h2>
-        <ul class="advantages__list advantages-list">
-          <li class="advantages-list__item advantages-list__item--ecology">Экологически чистые материалы</li>
-          <li class="advantages-list__item advantages-list__item--wool">Связано вручную с любовью и умилением</li>
-          <li class="advantages-list__item advantages-list__item--price">Скандинавский стиль по российской цене</li>
-          <li class="advantages-list__item advantages-list__item--rocket">Поддержка отечественного производителя</li>
-          <li class="advantages-list__item advantages-list__item--like">Увеличивает лайки на фотографиях</li>
-          <li class="advantages-list__item advantages-list__item--present">Поставляется в подарочной упаковке</li>
-        </ul>
-      </section>
-      <section class="reviews">
-        <h2 class="reviews__title">Отзывы</h2>
-        <blockquote class="reviews__blockquote">
-          <p class="reviews__description">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
-          <cite class="reviews__source">
-            <span class="reviews__source-name">Анастасия Красильникова</span>
-            <span class="reviews__source-mail">@misssssiskras</span>
-          </cite>
-        </blockquote>
-        <div class="reviews__navigation-wrapper">
-          <button class="reviews__navigation-button reviews__navigation-prev" type="button">
-            <span class="visually-hidden">Назад.</span>
-          </button>
-          <button class="reviews__navigation-button reviews__navigation-next" type="button">
-            <span class="visually-hidden">Вперед.</span>
-          </button>
-        </div>
-        <a class="reviews__link button" href="#">Написать</a>
-      </section>
-      <section class="contacts">
-        <h2 class="contacts__title">Контакты</h2>
-        <address class="contacts__address">
-          <dl class="contacts__list">
-            <dt class="contacts__list-name">e-mail:</dt>
-            <dd class="contacts__list-val">
-              <a class="contacts__list-email" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
-            </dd>
-            <dt class="contacts__list-name">адрес:</dt>
-            <dd class="contacts__list-val">г. Санкт-Петербург<br> ул. Большая Конюшенная<br> д. 19/8, офис 101</dd>
-          </dl>
-        </address>
-        <img class="contacts__map" src="img/map.jpg" width="320" height="454" alt="Наше местоположение на карте.">
-        <a class="contacts__button button" href="#">Напишите нам</a>
+    <main class="form-container">
+      <header class="form-container__header">
+        <h2 class="form-container__title">Вязание на заказ</h2>
+      </header>
+      <section class="filters">
+        <h2 class="visually-hidden">Фильтры и форма связи.</h2>
+        <p class="filters__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+        <form class="filters__form form" action="https://echo.htmlacademy.ru/" method="get">
+          <fieldset class="form__group radio">
+            <legend class="radio__title">Тип</legend>
+              <input class="radio__input visually-hidden" type="radio" id="interior-type" name="product-type" value="interior-type" checked>
+              <span class="radio__marker"></span>
+              <label class="radio__label" for="interior-type">Аксессуар для интерьера</label>
+              <input class="radio__input visually-hidden" type="radio" id="toy-type" name="product-type" value="toy-type">
+              <span class="radio__marker"></span>
+              <label class="radio__label" for="toy-type">Детская игрушка</label>
+          </fieldset>
+          <fieldset class="form__group checkbox">
+            <legend class="checkbox__title">Цвет</legend>
+            <ul class="checkbox__list checkbox-list">
+              <li class="checkbox-list__item">
+                <input class="" type="checkbox" id="white" name="white" checked>
+                <span class="checkbox-list__marker"></span>
+                <label class="checkbox-list__label" for="white">Белый</label>
+              </li>
+              <li class="checkbox-list__item">
+                <input class="checkbox-list__input" type="checkbox" id="grey" name="grey" checked>
+                <span class="checkbox-list__marker"></span>
+                <label class="checkbox-list__label" for="grey">Серый</label>
+              </li>
+              <li class="checkbox-list__item">
+                <input class="checkbox-list__input" type="checkbox" id="tiffany" name="tiffany">
+                <span class="checkbox-list__marker"></span>
+                <label class="checkbox-list__label" for="tiffany">Тиффани</label>
+              </li>
+              <li class="checkbox-list__item">
+                <input class="checkbox-list__input" type="checkbox" id="black" name="black">
+                <span class="checkbox-list__marker"></span>
+                <label class="checkbox-list__label" for="black">Черный</label>
+              </li>
+              <li class="checkbox-list__item">
+                <input class="checkbox-list__input" type="checkbox" id="pink" name="pink">
+                <span class="checkbox-list__marker"></span>
+                <label class="checkbox-list__label" for="pink">Розовый</label>
+              </li>
+              <li class="checkbox-list__item">
+                <input class="checkbox-list__input" type="checkbox" id="orange" name="orange">
+                <span class="checkbox-list__marker"></span>
+                <label class="checkbox-list__label" for="orange">Оранжевый</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="form__group">
+            <legend class="form__group-title">ФИО</legend>
+            <p class="form__name">
+              <label class="form__label" for="name">Имя:</label>
+              <input class="form__input" type="text" id="name" name="name" placeholder="Введите ваше имя*" required>
+            </p>
+            <p class="form__family">
+              <label class="form__label" for="family">Фамилия:</label>
+              <input class="form__input" type="text" id="family" name="family" placeholder="Укажите фамилию*" required>
+            </p>
+            <p class="form__surname">
+              <label class="form__label" for="surname">Отчество:</label>
+              <input class="form__input" type="text" id="surname" name="surname" placeholder="Отчество, если желаете" required>
+            </p>
+          </fieldset>
+          <fieldset class="form__group">
+            <legend class="visually-hidden">Контактная и дополнительная информация.</legend>
+            <p class="form__phone">
+              <label class="form__label" for="phone">Тел</label>
+              <input class="form__input" type="tel" id="phone" name="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ" required>
+            </p>
+            <p class="form__email">
+              <label class="form__label" for="e-mail">E-mail</label>
+              <input class="form__input" type="email" id="e-mail" name="e-mail" placeholder="Ваш Email*" required>
+            </p>
+            <p class="form__free">
+              <label class="form__label" for="free-text">Доп</label>
+              <input class="form__input" type="text" id="free-text" name="free-text" placeholder="Опишите все ваши пожелания к заказу" required>
+            </p>
+          </fieldset>
+          <span class="form__text">*Поля обязательны для заполнения</span>
+          <button class="form__button" type="submit">Отправить заказ</button>
+        </form>
       </section>
     </main>
     <footer class="main-footer">
@@ -164,20 +170,5 @@
         </a>
       </div>
     </footer>
-    <div class="modal visually-hidden">
-      <h2 class="modal__title">Добавить<br> в корзину</h2>
-      <form class="modal__form modal-form" action="https://echo.htmlacademy.ru/" method="get">
-        <fieldset class="modal-form__group">
-          <legend class="modal-form__group-title">Выберите размер:</legend>
-            <input type="radio" id="size-s" name="size" value="size-s" checked>
-            <label for="size-s">S</label>
-            <input type="radio" id="size-m" name="size" value="size-m">
-            <label for="size-m">M</label>
-            <input type="radio" id="size-l" name="size" value="size-l">
-            <label for="size-l">L</label>
-        </fieldset>
-        <button class="modal__button" type="submit">Добавить</button>
-      </form>
-    </div>
   </body>
 </html>
