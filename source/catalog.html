@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
   </head>
-  <body class="page__body">
+  <body class="page-body">
     <header class="main-header">
       <nav class="main-nav">
         <a class="main-header__logo" href="#"></a>
@@ -22,7 +22,7 @@
         <ul class="main-nav__list user-list">
           <li class="user-list__item">
             <a class="user-list__link user-list__link--search" href="#">
-              <span class="visually-hidden">Поиск по сайту.</span>
+              <span class="user-list__text">Поиск по сайту</span>
             </a>
           </li>
           <li class="user-list__item">
@@ -44,15 +44,15 @@
     </header>
     <main class="catalog-container">
       <header class="catalog-header">
-        <h2 class="catalog-header__title">Каталог товаров</h2>
+        <h2 class="catalog-header__title main-title">Каталог товаров</h2>
       </header>
       <section class="catalog">
         <ul class="catalog__list product">
           <li class="product__item">
-            <a class="product__title" href="#">Зайчик-попрыгайчик</a>
             <a class="product__img-link" href="#">
               <img class="product__img" src="img/product/product-1.jpg" width="260" height="195" alt="Вязаная игрушка зайчик.">
             </a>
+            <a class="product__title" href="#">Зайчик-попрыгайчик</a>
             <p class="product__description">Рост 30 см, вес 200 г</p>
             <p class="product__price">1 200 руб.</p>
             <a class="product__card" href="#">
@@ -60,10 +60,10 @@
             </a>
           </li>
           <li class="product__item">
-            <a class="product__title" href="#">Корзинка для белья</a>
             <a class="product__img-link" href="#">
               <img class="product__img" src="img/product/product-2.jpg" width="260" height="195" alt="Вязаная корзина для белья.">
             </a>
+            <a class="product__title" href="#">Корзинка для белья</a>
             <p class="product__description">Диаметр 15 см, высота 10 см</p>
             <p class="product__price">690 руб.</p>
             <a class="product__card" href="#">
@@ -71,10 +71,10 @@
             </a>
           </li>
           <li class="product__item">
-            <a class="product__title" href="#">Большая корзинка<br> для игрушек</a>
             <a class="product__img-link" href="#">
               <img class="product__img" src="img/product/product-3.jpg" width="260" height="195" alt="Вязаная корзина с игрушками.">
             </a>
+            <a class="product__title" href="#">Большая корзинка<br> для игрушек</a>
             <p class="product__description">Диаметр 30 см, высота 30 см</p>
             <p class="product__price">1 500 руб.</p>
             <a class="product__card" href="#">
@@ -107,34 +107,29 @@
           <path d="M24.2204 6.7C24.7204 6.6 25.2204 6.5 25.7204 6.2C25.8204 6.1 25.9204 6 25.9204 6C26.4204 5.7 26.9204 5.2 26.6204 4.6C26.1204 3.5 26.2204 2.4 26.2204 1.2C26.2204 0.2 25.2204 0 24.4204 0C23.7204 0.1 22.2204 0.6 22.2204 1.5C22.2204 2.5 22.1204 3.5 22.3204 4.5C22.3204 4.6 22.2204 4.7 22.2204 4.9C22.1204 5.1 22.2204 5.3 22.3204 5.5V5.6C22.3204 5.7 22.3204 5.8 22.3204 5.9C22.4204 6.1 22.5204 6.3 22.7204 6.4C23.3204 6.7 23.8204 6.7 24.2204 6.7Z" fill="black"/>
           </svg>
       </a>
-      <div class="main-footer__social social">
-        <h2 class="visually-hidden">Наши социальные сети.</h2>
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
-              <span class="visually-hidden">Мы в Вконтакте</span>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
-              <span class="visually-hidden">Мы в Ютубе</span>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
-              <span class="visually-hidden">Мы в Телеграме</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="main-footer__copyright copyright">
-        <h2 class="copyright__title">Разработано</h2>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <svg width="27" height="35" viewBox="0 0 27 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M13.6 0H13.5L0 1.4V26.1L13.5 34.1L26.9 26.1V1.4L13.6 0ZM25 12.1L13.5 5.3V5.2H13.4L13.3 5.1V5.2L1.9 12.1V3.1L13.4 1.9L25 3.1V12.1ZM13.4 6.8L24.9 13.5L20.4 16.1L13.3 11.9V13.3L19.2 16.8L18.3 17.3L13.3 14.3V15.7L17.1 18L16.3 18.5L13.3 16.7V18.1L15.2 19.2L13.4 20.3L2 13.6L13.4 6.8ZM1.9 15.1L13.3 21.9V22.9L5.4 18.2V19.6L13.4 24.4V25.5L5.4 20.8V22.2L13.4 27L21.5 22.1V16.9L24.9 14.9V24.9L13.4 31.8L1.9 25V15.1Z" fill="#63D1BB"/>
-          </svg>
-        </a>
-      </div>
+      <ul class="social">
+        <li class="social__item">
+          <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+            <span class="visually-hidden">Мы в Вконтакте</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+            <span class="visually-hidden">Мы в Ютубе</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
+            <span class="visually-hidden">Мы в Телеграме</span>
+          </a>
+        </li>
+      </ul>
+      <a class="copyright" href="https://htmlacademy.ru/intensive/adaptive">
+        <span class="visually-hidden">Разработано htmlacademy.</span>
+        <svg width="27" height="35" viewBox="0 0 27 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13.6 0H13.5L0 1.4V26.1L13.5 34.1L26.9 26.1V1.4L13.6 0ZM25 12.1L13.5 5.3V5.2H13.4L13.3 5.1V5.2L1.9 12.1V3.1L13.4 1.9L25 3.1V12.1ZM13.4 6.8L24.9 13.5L20.4 16.1L13.3 11.9V13.3L19.2 16.8L18.3 17.3L13.3 14.3V15.7L17.1 18L16.3 18.5L13.3 16.7V18.1L15.2 19.2L13.4 20.3L2 13.6L13.4 6.8ZM1.9 15.1L13.3 21.9V22.9L5.4 18.2V19.6L13.4 24.4V25.5L5.4 20.8V22.2L13.4 27L21.5 22.1V16.9L24.9 14.9V24.9L13.4 31.8L1.9 25V15.1Z" fill="#63D1BB"/>
+        </svg>
+      </a>
     </footer>
     <div class="modal visually-hidden">
       <h2 class="modal__title">Добавить<br> в корзину</h2>
