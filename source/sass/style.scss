@@ -1,1 +1,41 @@
-// Начните писать стили здесь
+// Глобальные
+@use "./global/fonts";
+@use "./global/visually-hidden.scss";
+
+
+// Блоки главная
+@use "./blocks/title.scss";
+@use "./blocks/button.scss";
+@use "./blocks/page-body.scss";
+@use "./blocks/main-header.scss";
+@use "./blocks/main-nav.scss";
+@use "./blocks/site-list.scss";
+@use "./blocks/user-list.scss";
+@use "./blocks/stock-list.scss";
+@use "./blocks/promo.scss";
+@use "./blocks/main-title.scss";
+@use "./blocks/week-product.scss";
+@use "./blocks/table-feature.scss";
+@use "./blocks/categories-list.scss";
+@use "./blocks/advantages-list.scss";
+@use "./blocks/reviews.scss";
+@use "./blocks/contacts.scss";
+@use "./blocks/social.scss";
+@use "./blocks/copyright.scss";
+@use "./blocks/main-footer.scss";
+
+// Блоки форма
+@use "./blocks/form-container.scss";
+@use "./blocks/filters.scss";
+@use "./blocks/form-title.scss";
+@use "./blocks/radio.scss";
+@use "./blocks/checkbox.scss";
+@use "./blocks/form.scss";
+@use "./blocks/memo.scss";
+
+// Блоки каталог
+@use "./blocks/catalog-header.scss";
+@use "./blocks/product.scss";
+@use "./blocks/production.scss";
+@use "./blocks/modal.scss";
+@use "./blocks/modal-form.scss";

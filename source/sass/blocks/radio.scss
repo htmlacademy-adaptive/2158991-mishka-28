@@ -1,0 +1,26 @@
+.radio__label {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.radio__marker {
+  position: relative;
+  display: block;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 2px solid #444444;
+}
+
+.radio__input[type="radio"]:checked + .radio__marker::before {
+  --marker-radio-size: 18.33px;
+  content: "";
+  position: absolute;
+  width: var(--marker-radio-size);
+  height: var(--marker-radio-size);
+  background-color: #62d1ba;
+  border-radius: 50%;
+  left: calc(50% - var(--marker-radio-size) * 0.5);
+  top: calc(50% - var(--marker-radio-size) * 0.5);
+}
