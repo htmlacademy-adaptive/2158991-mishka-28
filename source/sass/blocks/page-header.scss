@@ -1,0 +1,25 @@
+@use "../global/variables.scss";
+
+.page-header {
+  display: flex;
+  justify-content: center;
+  background-color: #f1f1f1;
+
+  border-top: 1px solid #ececec;
+}
+
+.page-header__title {
+  display: block;
+  padding: 73.5px 0;
+  margin: 0;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 102px 0 75px;
+    margin-left: 1px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 102px 0 100px;
+    margin-left: 2px;
+  }
+}

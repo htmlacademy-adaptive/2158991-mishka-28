@@ -1,14 +1,145 @@
+@use "../global/variables.scss";
+
+.reviews {
+  position: relative;
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 161px;
+  }
+}
+
+.reviews__container {
+  @media (min-width: variables.$tablet-width) {
+    margin-top: 83px;
+    background-image: url("../img/review.jpg");
+    background-repeat: no-repeat;
+    background-size: 350px 457px;
+    background-position: left top;
+
+    margin-bottom: 85px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 1050px;
+    margin: 0 auto;
+    margin-top: 88px;
+  }
+}
+
+.reviews__wrapper {
+  width: 81%;
+  margin: 0 auto;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 87%;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: repeat(3, auto);
+    align-items: center;
+    justify-items: end;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 1050px;
+    padding-left: 175px;
+    box-sizing: border-box;
+  }
+}
+
+.reviews::after {
+  @media (min-width: variables.$tablet-width) {
+    position: absolute;
+    content: "";
+    background: url("../img/zigzag-line-t.svg");
+    background-position: center;
+    width: 100%;
+    height: 17px;
+    bottom: -85px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    background: url("../img/zigzag-line-d.svg");
+    background-position: center;
+    width: 100%;
+    height: 23px;
+    bottom: -80px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    bottom: -89px;
+  }
+}
+
+.reviews__title {
+  margin: 58px 0 14px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin: 83px 0 38px;
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin: 78px 0 36px -1px;
+  }
+}
+
+.reviews__blockquote {
+  display: none;
+  margin: 0;
+
+  @media (min-width: variables.$tablet-width) {
+    grid-column: 1/3;
+    grid-row: 2/4;
+  }
+}
+
+.reviews__blockquote--show {
+  display: block;
+}
+
 .reviews__description {
   font-size: 15px;
   line-height: 30px;
   color: #444444;
+  margin: 0;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 17px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    max-width: 93%;
+  }
+}
+
+.reviews__source {
+  @media (min-width: variables.$tablet-width) {
+    display: block;
+    padding: 28px 0 52px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 11px 0 100px;
+    margin-left: -1px;
+  }
 }
 
 .reviews__source-name {
+  display: block;
   font-style: normal;
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
+  margin: 33px 0 5px;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 18px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    font-size: 17px;
+  }
 }
 
 .reviews__source-mail {
@@ -16,4 +147,43 @@
   font-size: 17px;
   line-height: 24px;
   color: #444444;
+}
+
+.reviews__navigation-wrapper {
+  display: flex;
+
+  @media (min-width: variables.$tablet-width) {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    margin-right: 19px;
+    column-gap: 37px;
+  }
+}
+
+.reviews__navigation-button {
+  width: 50%;
+  border: 1px solid #ececec;
+  background-color: transparent;
+  padding: 13px 0 10px;
+  margin: 32px 0 37px;
+  cursor: pointer;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 49px;
+    border: none;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 99px;
+  }
+}
+
+.reviews__link {
+  @media (min-width: variables.$tablet-width) {
+    font-size: 17px;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    padding: 14px 38px;
+    margin-top: 39px;
+  }
 }

@@ -1,5 +1,27 @@
+@use "../global/variables.scss";
+
 .filters__description {
   font-size: 13px;
   line-height: 24px;
   color: #444444;
+
+  width: 81%;
+  margin: 0 auto;
+  padding-top: 16px;
+  padding-bottom: 30px;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 17px;
+    line-height: 30px;
+
+    width: 87%;
+    padding-top: 65px;
+    padding-bottom: 81px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 1050px;
+    box-sizing: border-box;
+    padding: 111px 175px 81px;
+  }
 }

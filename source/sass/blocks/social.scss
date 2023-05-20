@@ -1,5 +1,13 @@
+@use "../global/variables.scss";
+
 .social {
+  display: flex;
+  gap: 29px;
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding: 27px 0 28px;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 55px 0 62px;
+  }
 }

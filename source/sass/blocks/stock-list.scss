@@ -1,7 +1,25 @@
+@use "../global/variables.scss";
+
+.stock-list {
+  display: none;
+
+  @media (min-width: variables.$desktop-width) {
+    display: flex;
+    position: absolute;
+    top: 108px;
+    z-index: 1;
+    column-gap: 62px;
+  }
+}
+
 .stock-list__link {
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
   text-decoration: none;
   color: #000000;
+
+  @media (min-width: variables.$desktop-width) {
+    font-size: 15px;
+  }
 }

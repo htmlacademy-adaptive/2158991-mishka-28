@@ -1,0 +1,21 @@
+@use "../global/variables.scss";
+
+.advantages__container {
+  width: 81%;
+  margin: 0 auto;
+  max-width: 1050px;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 87%;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 91.3%;
+    padding: 0 175px;
+    box-sizing: border-box;
+  }
+}
+
+.advantages__title {
+  margin: 73px 0 82px;
+}

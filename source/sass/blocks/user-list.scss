@@ -1,7 +1,92 @@
+@use "../global/variables.scss";
+
+.user-list {
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+    justify-content: end;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    order: 2;
+  }
+}
+
+.user-list__item {
+  @media (min-width: variables.$tablet-width) {
+    border-left: 1px solid #ececec;
+  }
+}
+
 .user-list__link {
+  display: flex;
+  justify-content: center;
+  width: 100%;
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
   text-decoration: none;
   color: #000000;
+
+  @media (min-width: variables.$tablet-width) {
+    display: inline;
+  }
+}
+
+.user-list__text {
+  display: block;
+  min-width: 260px;
+  box-sizing: border-box;
+  padding: 28.5px 0 26.5px 46px;
+
+  @media (min-width: variables.$tablet-width) {
+    display: inline;
+  }
+}
+
+.user-list__link--search {
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 82px;
+    // border-left: 1px solid #ececec;
+    // border-right: 1px solid #ececec;
+  }
+}
+
+.user-list__link--search::before {
+  @media (min-width: variables.$tablet-width) {
+    position: absolute;
+    content: url("../img/icon/icon-search.svg");
+    width: 20px;
+    height: 20px;
+    top: 36px;
+  }
+}
+
+.user-list__link--card {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.user-list__text--search {
+  @media (min-width: variables.$tablet-width) {
+    display: none;
+  }
+}
+
+.user-list__item--card {
+  @media (min-width: variables.$tablet-width) {
+    display: block;
+    max-width: 60%;
+    text-align: end;
+    padding: 32.5px 0 31.5px;
+    min-width: 264px;
+  }
+}
+
+.user-list__text--card {
+  @media (min-width: variables.$tablet-width) {
+    padding: 0;
+  }
 }

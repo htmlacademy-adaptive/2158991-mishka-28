@@ -1,3 +1,57 @@
-// body {
-//   background: #ff0000;
-// }
+@use "../global/variables.scss";
+
+.main-header {
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.main-header__container {
+  max-width: 1050px;
+
+  @media (min-width: variables.$tablet-width) {
+    position: relative;
+    width: 87%;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 91.3%;
+  }
+}
+
+.main-header__logo-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 79px;
+
+  @media (min-width: variables.$tablet-width) {
+    position: absolute;
+    justify-content: start;
+    z-index: 2;
+    top: 3px;
+    left: -1px;
+    height: 89px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 149px;
+    margin-left: calc(50% - 75px);
+    left: 0;
+  }
+}
+
+.main-header__toggle {
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  right: 30px;
+  background-color: transparent;
+  cursor: pointer;
+
+  @media (min-width: variables.$tablet-width) {
+    display: none;
+  }
+}

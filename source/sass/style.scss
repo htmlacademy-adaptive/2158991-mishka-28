@@ -1,14 +1,17 @@
 // Глобальные
-@use "./global/fonts";
+@use "./global/variables.scss";
+@use "./global/global.scss";
+@use "./global/fonts.scss";
 @use "./global/visually-hidden.scss";
-
 
 // Блоки главная
 @use "./blocks/title.scss";
 @use "./blocks/button.scss";
 @use "./blocks/page-body.scss";
+@use "./blocks/container.scss";
 @use "./blocks/main-header.scss";
 @use "./blocks/main-nav.scss";
+@use "./blocks/main-container.scss";
 @use "./blocks/site-list.scss";
 @use "./blocks/user-list.scss";
 @use "./blocks/stock-list.scss";
@@ -17,6 +20,7 @@
 @use "./blocks/week-product.scss";
 @use "./blocks/table-feature.scss";
 @use "./blocks/categories-list.scss";
+@use "./blocks/advantages.scss";
 @use "./blocks/advantages-list.scss";
 @use "./blocks/reviews.scss";
 @use "./blocks/contacts.scss";
@@ -25,17 +29,18 @@
 @use "./blocks/main-footer.scss";
 
 // Блоки форма
-@use "./blocks/form-container.scss";
+@use "./blocks/page-header.scss";
 @use "./blocks/filters.scss";
+@use "./blocks/form.scss";
 @use "./blocks/form-title.scss";
 @use "./blocks/radio.scss";
 @use "./blocks/checkbox.scss";
-@use "./blocks/form.scss";
 @use "./blocks/memo.scss";
 
 // Блоки каталог
-@use "./blocks/catalog-header.scss";
+@use "./blocks/catalog.scss";
 @use "./blocks/product.scss";
 @use "./blocks/production.scss";
+@use "./blocks/video.scss";
 @use "./blocks/modal.scss";
 @use "./blocks/modal-form.scss";

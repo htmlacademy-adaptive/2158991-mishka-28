@@ -1,10 +1,18 @@
 .copyright {
+  display: flex;
+  align-items: center;
+  gap: 27px;
   text-decoration: none;
   color: #000000;
+  padding: 16px 0 23px;
 }
 
 .copyright__title {
   font-weight: 700;
   font-size: 19px;
   line-height: 18px;
+}
+
+.copyright__icon {
+  margin-top: 4px;
 }

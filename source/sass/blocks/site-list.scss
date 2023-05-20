@@ -1,7 +1,64 @@
+@use "../global/variables.scss";
+
+.site-list {
+  @media (min-width: variables.$tablet-width) {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    column-gap: 36px;
+    order: 2;
+    top: 109px;
+    background-color: transparent;
+    z-index: 1;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    position: relative;
+    order: 1;
+    top: 0;
+    align-items: center;
+    column-gap: 35px;
+  }
+}
+
+.site-list__item-catalog {
+  @media (min-width: variables.$desktop-width) {
+    padding: 32px 35px 31px 0;
+    border-right: 1px solid #ececec;
+  }
+}
+
 .site-list__link {
+  display: flex;
+  justify-content: center;
+  width: 100%;
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
   text-decoration: none;
   color: #000000;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 15px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    font-size: 17px;
+    padding-top: 1px;
+  }
+}
+
+.site-list__text {
+  display: flex;
+  min-width: 260px;
+  max-width: 260px;
+  box-sizing: border-box;
+  padding: 28.5px 0 26.5px 46px;
+
+  @media (min-width: variables.$tablet-width) {
+    min-width: 0;
+    text-align: start;
+    padding: 0;
+  }
 }

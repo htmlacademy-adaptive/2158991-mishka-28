@@ -1,5 +1,32 @@
+@use "../global/variables.scss";
+
+.table-feature {
+  width: 100%;
+  margin-left: -2px;
+}
+
+.table-feature tbody {
+  border-spacing: 0;
+}
+
 .table-feature__row {
+  display: flex;
   font-size: 15px;
   line-height: 20px;
   color: #444444;
+  padding: 9px 0;
+  border-bottom: 1px solid #ececec;
+
+  @media (min-width: variables.$tablet-width) {
+    line-height: 19px;
+  }
+}
+
+.table-feature__row-name {
+  width: 37.7%;
+  padding: 0;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 33.5%;
+  }
 }
