@@ -47,6 +47,25 @@
   }
 }
 
+.main-nav--nojs {
+  @media (max-width: variables.$mobile-width-only) {
+    position: relative;
+  }
+}
+
+.main-nav--nojs .main-nav__toggle-container {
+  @media (max-width: variables.$mobile-width-only) {
+    display: none;
+  }
+}
+
+.main-nav--nojs .site-list,
+.main-nav--nojs .user-list {
+  @media (max-width: variables.$mobile-width-only) {
+    display: block;
+  }
+}
+
 .main-nav--closed .main-nav__toggle::before {
   content: "";
   position: absolute;
