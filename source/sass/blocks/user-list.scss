@@ -36,7 +36,7 @@
   display: block;
   min-width: 260px;
   box-sizing: border-box;
-  padding: 28.5px 0 26.5px 46px;
+  padding: 27px 0 26.5px 46px;
 
   @media (min-width: variables.$tablet-width) {
     display: inline;
@@ -44,29 +44,50 @@
 }
 
 .user-list__link--search {
+  position: relative;
+
   @media (min-width: variables.$tablet-width) {
     display: flex;
     justify-content: center;
-    position: relative;
     width: 82px;
-    // border-left: 1px solid #ececec;
-    // border-right: 1px solid #ececec;
   }
 }
 
 .user-list__link--search::before {
+  position: absolute;
+  content: url("../img/icon/icon-search.svg");
+  width: 18px;
+  height: 18px;
+  top: 30px;
+  margin-left: -240px;
+
   @media (min-width: variables.$tablet-width) {
-    position: absolute;
     content: url("../img/icon/icon-search.svg");
     width: 20px;
     height: 20px;
     top: 36px;
+    margin-left: 0;
   }
 }
 
 .user-list__link--card {
   display: flex;
   flex-wrap: wrap;
+  position: relative;
+}
+
+.user-list__link--card::before {
+  position: absolute;
+  content: url("../img/icon/cart.svg");
+  width: 21px;
+  height: 18px;
+  top: 27px;
+  margin-left: -240px;
+
+  @media (min-width: variables.$tablet-width) {
+    top: 1px;
+    margin-left: -182px;
+  }
 }
 
 .user-list__text--search {

@@ -30,7 +30,7 @@
   @media (min-width: variables.$tablet-width) {
     position: absolute;
     justify-content: start;
-    z-index: 2;
+    z-index: 3;
     top: 3px;
     left: -1px;
     height: 89px;
@@ -46,4 +46,8 @@
 .main-header__logo {
   margin-top: 5px;
   margin-right: 2px;
+
+  @media (min-width: variables.$desktop-width) {
+    margin: 0;
+  }
 }

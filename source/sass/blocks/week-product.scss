@@ -16,9 +16,15 @@
 }
 
 .week-product::after {
+  position: absolute;
+  content: "";
+  background: url("../img/zigzag-line-m.svg");
+  background-position: center;
+  width: 100%;
+  height: 6px;
+  bottom: -41px;
+
   @media (min-width: variables.$tablet-width) {
-    position: absolute;
-    content: "";
     background: url("../img/zigzag-line-t.svg");
     background-position: center;
     width: 100%;

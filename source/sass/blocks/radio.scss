@@ -36,13 +36,14 @@
   display: flex;
   align-items: center;
   column-gap: 19px;
-  padding-bottom: 11px;
+  margin-bottom: 11px;
+  cursor: pointer;
 
   @media (min-width: variables.$tablet-width) {
     font-size: 19px;
 
     column-gap: 27px;
-    padding-bottom: 26px;
+    margin-bottom: 26px;
   }
 
   @media (min-width: variables.$desktop-width) {

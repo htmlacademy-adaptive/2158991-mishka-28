@@ -18,6 +18,13 @@
   }
 }
 
+.categories-list__item:hover {
+  @media (min-width: variables.$tablet-width) {
+    margin-top: -5px;
+    padding-bottom: 5px;
+  }
+}
+
 .categories-list__item--interior {
   background-color: #63d1bb;
 }
@@ -42,7 +49,9 @@
 }
 
 .categories-list__text-container {
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 81%;
   margin: 0 auto;
 
@@ -60,5 +69,21 @@
 
   @media (min-width: variables.$tablet-width) {
     padding: 25px 0 34px;
+  }
+}
+
+.categories-list__interior {
+  margin-right: 5px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-right: 0;
+  }
+}
+
+.categories-list__toy {
+  margin-right: -3px;
+
+  @media (min-width: variables.$desktop-width) {
+    margin-right: -1px;
   }
 }
