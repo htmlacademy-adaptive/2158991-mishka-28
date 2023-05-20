@@ -43,15 +43,7 @@
   }
 }
 
-.main-header__toggle {
-  position: absolute;
-  width: 21px;
-  height: 21px;
-  right: 30px;
-  background-color: transparent;
-  cursor: pointer;
-
-  @media (min-width: variables.$tablet-width) {
-    display: none;
-  }
+.main-header__logo {
+  margin-top: 5px;
+  margin-right: 2px;
 }
