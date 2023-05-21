@@ -1,0 +1,17 @@
+@use "../global/variables.scss";
+
+.catalog__container {
+  width: 81%;
+  margin: 0 auto;
+  padding-top: 31px;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 87%;
+    padding-top: 78px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 1050px;
+    padding-top: 123px;
+  }
+}

@@ -1,13 +1,79 @@
+@use "../global/variables.scss";
+
 .promo {
-  background-color: #ffffff;
+  border-top: 1px solid #ececec;
+  position: relative;
+}
+
+.promo::after {
+  @media (min-width: variables.$tablet-width) {
+    position: absolute;
+    content: "";
+    background: url("../img/zigzag-fill-t.svg");
+    background-position: center;
+    width: 100%;
+    height: 24px;
+    bottom: -12px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    background: url("../img/zigzag-fill-d.svg");
+    background-position: center;
+    width: 100%;
+    height: 34px;
+    bottom: -17px;
+  }
+}
+
+.promo__title {
+  display: block;
+  width: 260px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 73px 0 120px;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 690px;
+    padding: 155px 0 372px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 157px 0 355px;
+  }
+}
+
+.promo__title-container {
+  margin: 0 auto;
+}
+
+.promo__title-img {
+  background-color: #f9f9f9;
   background-image: url("../img/promo-m.jpg");
   background-repeat: no-repeat;
+  background-position: 50% 19%;
+
+  @media (min-width: variables.$tablet-width) {
+    background-image: url("../img/promo-t.jpg");
+    background-position: 50% 0;
+  }
 }
 
-.categories-list__link--interior {
-  background-color: #63d1bb;
+.promo__list-container {
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+    justify-content: center;
+    background-color: #f9f9f9;
+  }
 }
 
-.categories-list__link--toys {
-  background-color: #56c3b2;
+.promo__list {
+  max-width: 1050px;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 87%;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 91.3%;
+  }
 }

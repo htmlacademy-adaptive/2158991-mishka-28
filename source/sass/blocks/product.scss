@@ -1,18 +1,132 @@
+@use "../global/variables.scss";
+
+.product {
+  display: flex;
+  flex-direction: column;
+  gap: 30.5px;
+
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: variables.$tablet-width) {
+    gap: 54px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    flex-direction: row;
+    gap: 0;
+    justify-content: space-between;
+  }
+}
+
+.product__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border: 1px solid #ececec;
+
+  @media (min-width: variables.$tablet-width) {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 316px;
+    box-sizing: border-box;
+    flex-direction: column;
+  }
+}
+
+.product__img-link {
+  width: 100%;
+}
+
+.product__img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.product__container {
+  width: 79%;
+
+  padding: 28.5px 0 26px;
+
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+    flex-direction: column;
+
+    padding: 27px 5.8% 24px 5%;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 30px 5.8% 24px 27px;
+    height: 100%;
+  }
+}
+
 .product__title {
   text-decoration: none;
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
   color: #000000;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 20px;
+  }
+}
+
+.product__title-basket {
+  display: block;
+  margin-top: -3.5px;
+  padding-bottom: 3.5px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 .product__description {
   font-size: 13px;
   line-height: 30px;
+
+  margin: 0;
+  padding: 6px 0 17.5px;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 15px;
+
+    flex-grow: 1;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 6px 0 13px;
+  }
+}
+
+.product__wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  border-top: 1px solid #ececec;
+  padding-top: 22px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-right: -3%;
+  }
 }
 
 .product__price {
   font-weight: 700;
   font-size: 15px;
   line-height: 24px;
+
+  margin: 0;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 17px;
+  }
 }

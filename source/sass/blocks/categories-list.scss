@@ -1,12 +1,89 @@
+@use "../global/variables.scss";
+
 .categories-list {
   list-style-type: none;
   margin: 0;
   padding: 0;
+
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+  }
+}
+
+.categories-list__item {
+  min-width: 100%;
+
+  @media (min-width: variables.$tablet-width) {
+    min-width: 50%;
+  }
+}
+
+.categories-list__item:hover {
+  @media (min-width: variables.$tablet-width) {
+    margin-top: -5px;
+    padding-bottom: 5px;
+  }
+}
+
+.categories-list__item--interior {
+  background-color: #63d1bb;
+}
+
+.categories-list__item--toys {
+  background-color: #56c3b2;
 }
 
 .categories-list__link {
+  display: block;
+  width: 100%;
   font-weight: 700;
   font-size: 19px;
   line-height: 24px;
   color: #ffffff;
+  text-decoration: none;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.categories-list__text-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 81%;
+  margin: 0 auto;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 100%;
+    padding: 0 36px;
+    box-sizing: border-box;
+  }
+}
+
+.categories-list__text {
+  display: block;
+  width: 170px;
+  padding: 24px 0 31px;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 25px 0 34px;
+  }
+}
+
+.categories-list__interior {
+  margin-right: 5px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-right: 0;
+  }
+}
+
+.categories-list__toy {
+  margin-right: -3px;
+
+  @media (min-width: variables.$desktop-width) {
+    margin-right: -1px;
+  }
 }

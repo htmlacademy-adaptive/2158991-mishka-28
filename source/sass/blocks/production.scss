@@ -1,11 +1,123 @@
+@use "../global/variables.scss";
+
+.production__container {
+  width: 81%;
+  margin: 0 auto;
+  padding-bottom: 33px;
+  margin-top: 30px;
+  margin-bottom: 58px;
+
+  border: 1px solid #ececec;
+
+  @media (min-width: variables.$tablet-width) {
+    display: grid;
+    width: 87%;
+    padding-bottom: 45px;
+    margin-top: 53px;
+    margin-bottom: 64px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-top: 56px;
+    margin-bottom: 104px;
+    padding-bottom: 0;
+    width: 1050px;
+    grid-template-columns: 683px 367px;
+    align-items: start;
+  }
+}
+
 .production__title {
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
+  width: 40%;
+
+  padding: 21.5px 0 25px 35%;
+  margin: 0;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 20px;
+    padding: 41px 0 0 16%;
+
+    grid-row: 2/3;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 97px 110px 27.5px 79px;
+
+    grid-row: 1/2;
+  }
+}
+
+.production__title--camera {
+  position: relative;
+  display: flex;
+}
+
+.production__title--camera::before {
+  position: absolute;
+  content: url("../img/icon/camera.svg");
+  width: 32px;
+  height: 22px;
+  align-self: center;
+  margin-left: -57px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-top: -7px;
+    margin-left: -65px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-top: -126px;
+    margin-left: 0;
+  }
+}
+
+.production__video {
+  @media (min-width: variables.$desktop-width) {
+    grid-column: 1/2;
+    grid-row: 1/4;
+  }
 }
 
 .production__description {
   font-size: 13px;
   line-height: 24px;
   color: #444444;
+
+  margin: 0;
+  margin-left: 13%;
+  padding: 35px 12% 41px 0;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 15px;
+    line-height: 30px;
+
+    margin-left: 6%;
+    padding: 24px 6% 40px 0;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-left: 0;
+    padding: 0 36px 50px 79px;
+  }
+}
+
+.production__button {
+  width: 73.8%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  cursor: pointer;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 87.4%;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 230px;
+    box-sizing: border-box;
+    margin-left: 79.5px;
+    margin-bottom: 60px;
+  }
 }

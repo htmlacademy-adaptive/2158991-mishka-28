@@ -1,0 +1,24 @@
+@use "../global/variables.scss";
+
+.video {
+  position: relative;
+}
+
+.video__img {
+  width: 100%;
+  // height: 455px; //ЭТО УДАЛИТЬ
+  vertical-align: middle;
+}
+
+.video__button {
+  position: absolute;
+  width: 102px;
+  height: 76px;
+  left: calc(50% - 51px);
+  top: calc(50% - 38px);
+  cursor: pointer;
+
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}

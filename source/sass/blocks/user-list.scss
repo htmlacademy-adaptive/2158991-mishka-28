@@ -1,7 +1,113 @@
+@use "../global/variables.scss";
+
+.user-list {
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+    justify-content: end;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    order: 2;
+  }
+}
+
+.user-list__item {
+  @media (min-width: variables.$tablet-width) {
+    border-left: 1px solid #ececec;
+  }
+}
+
 .user-list__link {
+  display: flex;
+  justify-content: center;
+  width: 100%;
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
   text-decoration: none;
   color: #000000;
+
+  @media (min-width: variables.$tablet-width) {
+    display: inline;
+  }
+}
+
+.user-list__text {
+  display: block;
+  min-width: 260px;
+  box-sizing: border-box;
+  padding: 27px 0 26.5px 46px;
+
+  @media (min-width: variables.$tablet-width) {
+    display: inline;
+  }
+}
+
+.user-list__link--search {
+  position: relative;
+
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+    justify-content: center;
+    width: 82px;
+  }
+}
+
+.user-list__link--search::before {
+  position: absolute;
+  content: url("../img/icon/icon-search.svg");
+  width: 18px;
+  height: 18px;
+  top: 30px;
+  margin-left: -240px;
+
+  @media (min-width: variables.$tablet-width) {
+    content: url("../img/icon/icon-search.svg");
+    width: 20px;
+    height: 20px;
+    top: 36px;
+    margin-left: 0;
+  }
+}
+
+.user-list__link--card {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.user-list__link--card::before {
+  position: absolute;
+  content: url("../img/icon/cart.svg");
+  width: 21px;
+  height: 18px;
+  top: 27px;
+  margin-left: -240px;
+
+  @media (min-width: variables.$tablet-width) {
+    top: 1px;
+    margin-left: -182px;
+  }
+}
+
+.user-list__text--search {
+  @media (min-width: variables.$tablet-width) {
+    display: none;
+  }
+}
+
+.user-list__item--card {
+  @media (min-width: variables.$tablet-width) {
+    display: block;
+    max-width: 60%;
+    text-align: end;
+    padding: 32.5px 0 31.5px;
+    min-width: 264px;
+  }
+}
+
+.user-list__text--card {
+  @media (min-width: variables.$tablet-width) {
+    padding: 0;
+  }
 }

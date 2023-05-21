@@ -1,28 +1,254 @@
+@use "../global/variables.scss";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form__group-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  @media (min-width: variables.$tablet-width) {
+    background-color: #f1f1f1;
+  }
+}
+
+.form__group {
+  width: 81%;
+
+  border: none;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 87%;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 930px;
+  }
+}
+
+.form__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 35px;
+
+  @media (min-width: variables.$tablet-width) {
+    row-gap: 21px;
+    padding-bottom: 50px;
+    padding-top: 61px;
+    background-color: #f1f1f1;
+  }
+}
+
+.form__item {
+  @media (min-width: variables.$tablet-width) {
+    width: 87%;
+    margin: 0 auto;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 930px;
+  }
+}
+
+.form__label-memo {
+  @media (min-width: variables.$tablet-width) {
+    width: 87%;
+    margin: 29px auto;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 930px;
+  }
+}
+
+.form__group-name {
+  display: flex;
+  flex-direction: column;
+  row-gap: 21.8px;
+  padding-bottom: 35px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-top: 68px;
+  }
+}
+
+.form__group-title {
+  padding: 0;
+  padding-bottom: 30px;
+}
+
+.form__group-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 21.8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-left: 25%;
+    margin-top: -64px;
+    row-gap: 24.8px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-left: 117px;
+  }
+}
+
 .form__label {
   font-weight: 700;
   font-size: 17px;
   line-height: 18px;
+
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 19px;
+
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.form__label-name {
+  @media (min-width: variables.$tablet-width) {
+    padding-right: 25px;
+  }
 }
 
 .form__input {
   min-width: 260px;
   border: 0;
   border-bottom: 2px solid #444444;
+
+  padding: 19px 0 15.5px;
+
+  @media (min-width: variables.$tablet-width) {
+    flex-grow: 1;
+    padding-left: 17px;
+    background-color: transparent;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-right: 115px;
+  }
 }
 
 .form__input::placeholder {
+  font-family: "Open Sans", sans-serif;
   font-size: 17px;
   line-height: 18px;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 19px;
+  }
 }
 
 .form__text {
   font-size: 14px;
   line-height: 16px;
   color: #444444;
+
+  @media (min-width: variables.$tablet-width) {
+    order: 2;
+    font-size: 17px;
+    line-height: 30px;
+  }
+}
+
+.form__group-contact {
+  display: flex;
+  flex-direction: column;
+  row-gap: 36px;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 100%;
+    row-gap: 0;
+  }
+}
+
+.form__input-tel {
+  padding: 21px 0 18px;
+
+  @media (min-width: variables.$tablet-width) {
+    padding-left: 18px;
+  }
+}
+
+.form__input-email {
+  padding: 22px 0 17px;
+
+  @media (min-width: variables.$tablet-width) {
+    padding-left: 18px;
+    padding-bottom: 16px;
+  }
+}
+
+.form__input-memo {
+  box-sizing: border-box;
+  padding: 17px;
+  padding-bottom: 21px;
+  color: #000000;
+  border: 2px solid #444444;
+  resize: none;
+  font-size: 17px;
+  line-height: 20px;
+  border-radius: 0;
+  margin: 21px 0 13px;
+
+  @media (min-width: variables.$desktop-width) {
+    margin-right: 115px;
+  }
+}
+
+.form__memo-title {
+  @media (min-width: variables.$tablet-width) {
+    align-self: flex-start;
+    margin-top: 41px;
+  }
+}
+
+.form__button-container {
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+    width: 87%;
+    align-items: center;
+    justify-content: space-between;
+    margin: 11px 0 50px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 700px;
+    margin-top: 7px;
+  }
 }
 
 .form__button {
   font-family: "Open Sans", sans-serif;
   background-color: transparent;
   border: 2px solid #444444;
+  font-size: 17px;
+  line-height: 20px;
+
+  width: 260px;
+  margin: 28px auto 55px;
+  cursor: pointer;
+
+  @media (min-width: variables.$tablet-width) {
+    margin: 0;
+
+    width: 230px;
+  }
 }

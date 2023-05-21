@@ -1,11 +1,106 @@
+@use "../global/variables.scss";
+
 .advantages-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 83px;
   list-style-type: none;
   margin: 0;
   padding: 0;
+
+  @media (min-width: variables.$tablet-width) {
+    display: grid;
+    row-gap: 110px;
+    grid-template-columns: 1fr calc(50% - 1px);
+    margin-top: 98px;
+  }
 }
 
 .advantages-list__item {
+  position: relative;
   font-weight: 700;
   font-size: 17px;
   line-height: 20px;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
+
+.advantages-list__item--ecology,
+.advantages-list__item--wool {
+  grid-row: 1;
+}
+
+.advantages-list__item--wool {
+  @media (min-width: variables.$tablet-width) {
+    // padding-top: 1px;
+    // padding-left: 1px;
+  }
+}
+
+.advantages-list__item--rocket {
+  @media (min-width: variables.$tablet-width) {
+    // padding-top: 1px;
+    // padding-left: 1px;
+  }
+}
+
+.advantages-list__item--price,
+.advantages-list__item--rocket {
+  grid-row: 2;
+}
+
+.advantages-list__item--ecology::before {
+  position: absolute;
+  content: url("../img/icon/icon-ecology.svg");
+  width: 33px;
+  height: 38px;
+  top: -55px;
+  left: 8px;
+}
+
+.advantages-list__item--price::before {
+  position: absolute;
+  content: url("../img/icon/icon-price.svg");
+  width: 47px;
+  height: 27px;
+  top: -54px;
+}
+
+.advantages-list__item--like::before {
+  position: absolute;
+  content: url("../img/icon/icon-like.svg");
+  width: 34px;
+  height: 27px;
+  top: -49px;
+  left: 7px;
+}
+
+.advantages-list__item--wool::before {
+  position: absolute;
+  content: url("../img/icon/icon-wool.svg");
+  width: 35px;
+  height: 34px;
+  top: -51px;
+  left: 2px;
+}
+
+.advantages-list__item--rocket::before {
+  position: absolute;
+  content: url("../img/icon/icon-rocket.svg");
+  width: 55px;
+  height: 23px;
+  top: -51px;
+  left: -6px;
+}
+
+.advantages-list__item--present::before {
+  position: absolute;
+  content: url("../img/icon/icon-present.svg");
+  width: 33px;
+  height: 32px;
+  top: -53px;
+  left: 2px;
 }
