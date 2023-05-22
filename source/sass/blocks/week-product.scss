@@ -27,7 +27,6 @@
   @media (min-width: variables.$tablet-width) {
     background: url("../img/zigzag-line-t.svg");
     background-position: center;
-    width: 100%;
     height: 17px;
     bottom: -64px;
   }
@@ -35,7 +34,6 @@
   @media (min-width: variables.$desktop-width) {
     background: url("../img/zigzag-line-d.svg");
     background-position: center;
-    width: 100%;
     height: 23px;
     bottom: -91px;
   }

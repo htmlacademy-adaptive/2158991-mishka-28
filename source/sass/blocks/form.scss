@@ -134,6 +134,13 @@
   border-bottom: 2px solid #444444;
 
   padding: 19px 0 15.5px;
+  outline: none;
+
+  &:hover,
+  &:active,
+  &:focus-visible {
+    border-color: #62d1ba;
+  }
 
   @media (min-width: variables.$tablet-width) {
     flex-grow: 1;
@@ -184,6 +191,52 @@
 
   @media (min-width: variables.$tablet-width) {
     padding-left: 18px;
+  }
+}
+
+.form__label-phone {
+  position: relative;
+}
+
+.form__label-phone::after {
+  position: absolute;
+  content: "";
+  background-image: url("../icons/phone.svg");
+  width: 25px;
+  height: 24px;
+  top: 31px;
+  right: 7px;
+
+  @media (min-width: variables.$tablet-width) {
+    top: 15px;
+    right: 26px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    right: 123px;
+  }
+}
+
+.form__label-mail {
+  position: relative;
+}
+
+.form__label-mail::after {
+  position: absolute;
+  content: "";
+  background-image: url("../icons/mail.svg");
+  width: 32px;
+  height: 21px;
+  top: 36px;
+  right: 3px;
+
+  @media (min-width: variables.$tablet-width) {
+    top: 19px;
+    right: 22px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    right: 119px;
   }
 }
 

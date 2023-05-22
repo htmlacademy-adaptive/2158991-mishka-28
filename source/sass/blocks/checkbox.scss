@@ -52,6 +52,14 @@
   align-items: center;
   cursor: pointer;
 
+  &:hover .checkbox__marker {
+    border: 2px solid #62d1ba;
+  }
+
+  &:active .checkbox__marker {
+    border: 2px solid rgba(0, 0, 0, 0.3);
+  }
+
   @media (min-width: variables.$tablet-width) {
     font-size: 19px;
   }

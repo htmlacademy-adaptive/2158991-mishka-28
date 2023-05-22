@@ -27,6 +27,14 @@
 
   border: 1px solid #ececec;
 
+  &:hover .product__container {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active .product__container {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
+
   @media (min-width: variables.$tablet-width) {
     flex-direction: row;
     align-items: stretch;
@@ -50,8 +58,9 @@
 
 .product__container {
   width: 79%;
-
   padding: 28.5px 0 26px;
+
+  transition: box-shadow 0.5s;
 
   @media (min-width: variables.$tablet-width) {
     display: flex;
@@ -61,6 +70,8 @@
   }
 
   @media (min-width: variables.$desktop-width) {
+    width: 100%;
+    box-sizing: border-box;
     padding: 30px 5.8% 24px 27px;
     height: 100%;
   }
@@ -72,6 +83,16 @@
   font-size: 17px;
   line-height: 24px;
   color: #000000;
+
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: variables.$tablet-width) {
     font-size: 20px;
@@ -116,6 +137,10 @@
 
   @media (min-width: variables.$tablet-width) {
     margin-right: -3%;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-right: 13px;
   }
 }
 

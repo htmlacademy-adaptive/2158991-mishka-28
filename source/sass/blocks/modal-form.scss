@@ -1,11 +1,68 @@
+@use "../global/variables.scss";
+
 .modal-form__group {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin: 0;
   border: none;
+  padding: 0;
 }
 
 .modal-form__group-title {
   font-size: 15px;
   line-height: 30px;
   color: #444444;
+  margin: 0 auto 21px;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 17px;
+  }
+}
+
+.modal-form__list {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 82px);
+  gap: 7px;
+  margin-bottom: 26px;
+
+  @media (min-width: variables.$tablet-width) {
+    grid-template-columns: repeat(3, 112px);
+  }
+}
+
+.modal-form__control {
+  display: block;
+  position: relative;
+  padding: 18px 0;
+  text-align: center;
+}
+
+.modal-form__marker {
+  position: absolute;
+  box-sizing: border-box;
+  width: 82px;
+  height: 52px;
+  border: 2px solid rgba(68, 68, 68, 0.1);
+  top: 0;
+  right: 0;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 112px;
+    height: 52px;
+  }
+}
+
+.modal-form__control input[type="radio"]:checked + .modal-form__marker,
+.modal-form__control:active .modal-form__marker {
+  border-color: #63d1bb;
+}
+
+.modal-form__control:hover .modal-form__marker {
+  border: 2px solid rgba(68, 68, 68, 0.3);
 }
 
 .modal-form__control-size {

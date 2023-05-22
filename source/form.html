@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Мишка</title>
     <link href="css/style.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg">
+    <link rel="apple-touch-icon" href="favicon/favicon-apple.png">
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body class="page-body">
     <header class="main-header">
@@ -252,6 +256,40 @@
         </a>
       </div>
     </footer>
+    <div class="modal">
+      <section class="modal__order">
+        <h2 class="modal__title">Добавить в&nbsp;корзину</h2>
+        <form class="modal__form modal-form" action="https://echo.htmlacademy.ru/" method="get">
+          <fieldset class="modal-form__group">
+            <legend class="modal-form__group-title">Выберите размер:</legend>
+            <ul class="modal-form__list">
+              <li class="modal-form__item">
+                <label class="modal-form__control modal-form__control--current" for="size-s">
+                  <input class="visually-hidden" type="radio" id="size-s" name="size" value="size-s" checked>
+                  <span class="modal-form__marker"></span>
+                  S
+                </label>
+              </li>
+              <li class="modal-form__item">
+                <label class="modal-form__control" for="size-m">
+                  <input class="visually-hidden" type="radio" id="size-m" name="size" value="size-m">
+                  <span class="modal-form__marker"></span>
+                  M
+                </label>
+              </li>
+              <li class="modal-form__item">
+                <label class="modal-form__control" for="size-l">
+                  <input class="visually-hidden" type="radio" id="size-l" name="size" value="size-l">
+                  <span class="modal-form__marker"></span>
+                  L
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="button button--colored" type="submit">Добавить</button>
+        </form>
+      </section>
+    </div>
     <script src="js/script.js"></script>
   </body>
 </html>

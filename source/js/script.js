@@ -12,3 +12,14 @@ navToggle.addEventListener('click', function () {
     navMain.classList.remove('main-nav--opened');
   }
 });
+
+let button=document.querySelector(".week-product__button");
+let modal=document.querySelector(".modal");
+
+button.addEventListener("click",function () {
+  modal.classList.add("modal--open");
+  })
+
+window.onclick = function(o){
+  o.target == modal && (modal.classList.remove("modal--open"),document.body.style.overflow="")
+};
