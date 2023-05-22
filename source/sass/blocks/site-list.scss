@@ -56,6 +56,16 @@
   box-sizing: border-box;
   padding: 28.5px 0 26.5px 46px;
 
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: variables.$tablet-width) {
     min-width: 0;
     text-align: start;

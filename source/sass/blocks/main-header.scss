@@ -47,6 +47,16 @@
   margin-top: 5px;
   margin-right: 2px;
 
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: variables.$desktop-width) {
     margin: 0;
   }

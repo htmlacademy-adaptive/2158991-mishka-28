@@ -4,7 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Мишка</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg">
+    <link rel="apple-touch-icon" href="favicon/favicon-apple.png">
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body class="page-body">
       <header class="main-header">
@@ -119,9 +123,13 @@
             </tr>
           </table>
           <picture class="week-product__img-container">
-            <source media="(min-width:1150px)" srcset="img/tiffany-baskets-d.jpg" width="525" height="636">
-            <source media="(min-width:768px)" srcset="img/tiffany-baskets-t.jpg" width="334" height="404">
-            <img class="week-product__img" src="../img/tiffany-baskets-m.jpg" width="260" height="315" alt="Вязаные корзинки тиффани/серый.">
+            <source type="image/webp" media="(min-width:1150px)" srcset="img/tiffany-baskets-d.webp 1x, img/tiffany-baskets-d@2x.webp 2x" width="525" height="636">
+            <source type="image/webp" media="(min-width:768px)" srcset="img/tiffany-baskets-t.webp 1x, img/tiffany-baskets-t@2x.webp 2x" width="334" height="404">
+            <source type="image/webp" srcset="img/tiffany-baskets-m.webp 1x, img/tiffany-baskets-m@2x.webp 2x" width="260" height="315">
+
+            <source media="(min-width:1150px)" srcset="img/tiffany-baskets-d.jpg 1x, img/tiffany-baskets-d@2x.jpg 2x" width="525" height="636">
+            <source media="(min-width:768px)" srcset="img/tiffany-baskets-t.jpg 1x, img/tiffany-baskets-t@2x.jpg 2x" width="334" height="404">
+            <img class="week-product__img" src="img/tiffany-baskets-m.jpg" srcset="img/tiffany-baskets-m@2x.jpg 2x" width="260" height="315" alt="Вязаные корзинки тиффани/серый.">
           </picture>
           <p class="week-product__price">Цена: 990 руб.</p>
           <a class="week-product__button button" href="#">Заказать</a>
@@ -257,19 +265,38 @@
       </div>
     </footer>
     <div class="modal">
-      <h2 class="modal__title">Добавить<br> в корзину</h2>
-      <form class="modal__form modal-form" action="https://echo.htmlacademy.ru/" method="get">
-        <fieldset class="modal-form__group">
-          <legend class="modal-form__group-title">Выберите размер:</legend>
-            <input type="radio" id="size-s" name="size" value="size-s" checked>
-            <label for="size-s">S</label>
-            <input type="radio" id="size-m" name="size" value="size-m">
-            <label for="size-m">M</label>
-            <input type="radio" id="size-l" name="size" value="size-l">
-            <label for="size-l">L</label>
-        </fieldset>
-        <button class="button button--colored" type="submit">Добавить</button>
-      </form>
+      <section class="modal__order">
+        <h2 class="modal__title">Добавить в&nbsp;корзину</h2>
+        <form class="modal__form modal-form" action="https://echo.htmlacademy.ru/" method="get">
+          <fieldset class="modal-form__group">
+            <legend class="modal-form__group-title">Выберите размер:</legend>
+            <ul class="modal-form__list">
+              <li class="modal-form__item">
+                <label class="modal-form__control modal-form__control--current" for="size-s">
+                  <input class="visually-hidden" type="radio" id="size-s" name="size" value="size-s" checked>
+                  <span class="modal-form__marker"></span>
+                  S
+                </label>
+              </li>
+              <li class="modal-form__item">
+                <label class="modal-form__control" for="size-m">
+                  <input class="visually-hidden" type="radio" id="size-m" name="size" value="size-m">
+                  <span class="modal-form__marker"></span>
+                  M
+                </label>
+              </li>
+              <li class="modal-form__item">
+                <label class="modal-form__control" for="size-l">
+                  <input class="visually-hidden" type="radio" id="size-l" name="size" value="size-l">
+                  <span class="modal-form__marker"></span>
+                  L
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="button button--colored" type="submit">Добавить</button>
+        </form>
+      </section>
     </div>
     <script src="js/script.js"></script>
   </body>
