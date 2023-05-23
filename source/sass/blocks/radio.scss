@@ -1,9 +1,12 @@
 @use "../global/variables.scss";
 
 .radio {
+  display: flex;
+  flex-direction: column;
   padding-bottom: 22px;
 
   @media (min-width: variables.$tablet-width) {
+    flex-direction: row;
     padding-bottom: 25px;
   }
 }
@@ -11,21 +14,23 @@
 .radio__title {
   padding: 0;
   padding-bottom: 30px;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 25.4%;
+    box-sizing: border-box;
+    padding-right: 20px;
+    margin-top: 18px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 116px;
+  }
 }
 
 .radio__list {
   list-style: none;
   padding: 0;
   margin: 0;
-
-  @media (min-width: variables.$tablet-width) {
-    margin-left: 25.4%;
-    margin-top: -64px;
-  }
-
-  @media (min-width: variables.$desktop-width) {
-    margin-left: 116px;
-  }
 }
 
 .radio__label {

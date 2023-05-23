@@ -4,7 +4,15 @@
   gap: 27px;
   text-decoration: none;
   color: #000000;
-  padding: 16px 0 23px;
+  padding: 22px 0 23px;
+
+  &:hover .copyright__icon {
+    fill: #46c1ae;
+  }
+
+  &:active .copyright__icon {
+    opacity: 0.3;
+  }
 }
 
 .copyright__title {
@@ -14,5 +22,6 @@
 }
 
 .copyright__icon {
+  fill: #63d1bb;
   margin-top: 4px;
 }

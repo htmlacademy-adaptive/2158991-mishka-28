@@ -32,11 +32,11 @@ export const styles = () => {
 // HTML
 
 const html = () => {
-  return gulp.src('source/*.html') // берем все файлы из папки source с расширением html
+  return gulp.src('source/*.html')
 
-  .pipe(htmlmin({ collapseWhitespace: true })) //минифицируем файлы html
+  .pipe(htmlmin({ collapseWhitespace: true }))
 
-  .pipe(gulp.dest('build')) // кладем в папку build
+  .pipe(gulp.dest('build'))
 }
 
 // Scripts
@@ -78,17 +78,7 @@ const svg = () => {
   .pipe(gulp.dest('build/img'))
 }
 
-const sprite = () => {
-  return gulp.src('source/icons/*.svg')
-  .pipe(svgo())
-  .pipe(svgstore({
-    inlineSvg: true
-  }))
-  .pipe(rename('sprite.svg'))
-  .pipe(gulp.dest('build/icons'))
-}
-
-const stack = () => {
+export const stack = () => {
   return gulp.src('source/icons/*.svg')
   .pipe(svgo())
   .pipe(stacksvg({
@@ -116,7 +106,7 @@ const copy = (done) => {
 
 //Clean
 
-const clean = () => {
+export const clean = () => {
   return deleteAsync('build');
 }
 
@@ -141,23 +131,6 @@ const watcher = () => {
   gulp.watch('source/*.html').on('change', browser.reload);
 }
 
-// Build
-
-export const build = gulp.series(
-  clean,
-  copy,
-  optimizeimages,
-  gulp.parallel (
-    styles,
-    html,
-    scripts,
-    svg,
-    sprite,
-    stack,
-    createWebp
-  ),
-);
-
 //Default
 
 export default gulp.series(
@@ -169,7 +142,6 @@ export default gulp.series(
     html,
     scripts,
     svg,
-    sprite,
     stack,
     createWebp
   ),
@@ -178,22 +150,3 @@ export default gulp.series(
     watcher
   )
 );
-
-// export const dev = gulp.series (
-//   clean,
-//   copy,
-//   copyImages,
-//   gulp.parallel (
-//     styles,
-//     html,
-//     scripts,
-//     svg,
-//     sprite,
-//     stack,
-//     createWebp
-//   ),
-//   gulp.series (
-//     server,
-//     watcher
-//   )
-// );

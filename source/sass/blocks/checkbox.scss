@@ -3,16 +3,33 @@
 .checkbox {
   display: flex;
   flex-direction: column;
-  row-gap: 23px;
   padding-bottom: 33px;
 
   @media (min-width: variables.$tablet-width) {
-    margin-top: 67px;
+    flex-direction: row;
+    row-gap: 23px;
+    padding-top: 50px;
     padding-bottom: 50px;
   }
 
   @media (min-width: variables.$desktop-width) {
+    padding-top: 48px;
     padding-bottom: 53px;
+  }
+}
+
+.checkbox__title {
+  display: block;
+  padding: 0;
+  padding-bottom: 24px;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 25%;
+    margin-top: 17px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 115px;
   }
 }
 
@@ -26,21 +43,16 @@
 
   @media (min-width: variables.$tablet-width) {
     display: grid;
+    column-gap: 60px;
     row-gap: 24px;
-    grid-template-columns: 52.2% 1fr;
-    padding-left: 25%;
-    margin-top: -57px;
+    grid-template-columns: 1fr 1fr;
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding-left: 115px;
-    grid-template-columns: 262px 264px 262px;
+    grid-template-columns: 252px 254px 252px;
+    column-gap: 10px;
+    row-gap: 26px;
   }
-}
-
-.checkbox__title {
-  padding: 0;
-  padding-bottom: 24px;
 }
 
 .checkbox__label {
@@ -90,12 +102,13 @@
   content: "";
   width: 23px;
   height: 16px;
-  background-image: url("../img/icon/tick.svg");
+  mask-image: url("../icons/stack.svg#tick");
+  background-color: #000000;
   top: 8px;
   left: 5px;
 
   @media (min-width: variables.$tablet-width) {
-    background-image: url("../img/icon/tick-d.svg");
+    mask-image: url("../icons/stack.svg#tick-d");
     width: 32px;
     height: 22px;
     top: 14px;

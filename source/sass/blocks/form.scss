@@ -47,6 +47,10 @@
     padding-top: 61px;
     background-color: #f1f1f1;
   }
+
+  @media (min-width: variables.$desktop-width) {
+    padding-top: 46px;
+  }
 }
 
 .form__item {
@@ -80,17 +84,27 @@
 .form__group-name {
   display: flex;
   flex-direction: column;
-  row-gap: 21.8px;
-  padding-bottom: 35px;
+  margin-bottom: 35px;
 
   @media (min-width: variables.$tablet-width) {
-    margin-top: 68px;
+    flex-direction: row;
+    row-gap: 21.8px;
+    margin-top: 50px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 51px;
   }
 }
 
 .form__group-title {
   padding: 0;
   padding-bottom: 30px;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 25%;
+    padding-top: 18px;
+  }
 }
 
 .form__group-list {
@@ -102,13 +116,13 @@
   padding: 0;
 
   @media (min-width: variables.$tablet-width) {
-    margin-left: 25%;
-    margin-top: -64px;
+    flex-grow: 1;
     row-gap: 24.8px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    margin-left: 117px;
+    row-gap: 23.8px;
+    margin-left: 2px;
   }
 }
 
@@ -208,7 +222,7 @@
   position: absolute;
   content: "";
   mask-image: url("../icons/stack.svg#phone");
-  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.2);
   width: 25px;
   height: 24px;
   top: 31px;
@@ -232,7 +246,7 @@
   position: absolute;
   content: "";
   mask-image: url("../icons/stack.svg#mail");
-  background-color: rgba(0, 0, 0, 1);
+  background-color: rgba(0, 0, 0, 0.2);
   width: 32px;
   height: 21px;
   top: 36px;
@@ -277,7 +291,7 @@
 .form__memo-title {
   @media (min-width: variables.$tablet-width) {
     align-self: flex-start;
-    margin-top: 41px;
+    padding-top: 41px;
   }
 }
 

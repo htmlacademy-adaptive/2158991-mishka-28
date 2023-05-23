@@ -1,9 +1,12 @@
 @use "../global/variables.scss";
 
 .user-list {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+
   @media (min-width: variables.$tablet-width) {
     display: flex;
     justify-content: end;
+    box-shadow: none;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -56,6 +59,16 @@
 .user-list__link--search {
   position: relative;
 
+  &:hover::before {
+    background-color: #63d1bb;
+    opacity: 1;
+  }
+
+  &:active::before {
+    background-color: #63d1bb;
+    opacity: 0.3;
+  }
+
   @media (min-width: variables.$tablet-width) {
     display: flex;
     justify-content: center;
@@ -67,7 +80,7 @@
   position: absolute;
   content: "";
   mask-image: url("../icons/stack.svg#icon-search");
-  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.2);
   width: 18px;
   height: 18px;
   top: 30px;
@@ -75,11 +88,6 @@
 
   @media (min-width: variables.$tablet-width) {
     content: "";
-    // background-image: url("../icons/icon-search.svg");
-    mask-image: url("../icons/stack.svg#icon-search");
-    background-color: #000000;
-    width: 18px;
-    height: 18px;
     top: 36px;
     margin-left: 0;
   }
@@ -89,11 +97,23 @@
   display: flex;
   flex-wrap: wrap;
   position: relative;
+
+  &:hover::before {
+    background-color: #63d1bb;
+    opacity: 1;
+  }
+
+  &:active::before {
+    background-color: #63d1bb;
+    opacity: 0.3;
+  }
 }
 
 .user-list__link--card::before {
   position: absolute;
-  content: url("../img/icon/cart.svg");
+  content: "";
+  mask-image: url("../icons/stack.svg#cart");
+  background-color: rgba(0, 0, 0, 0.2);
   width: 21px;
   height: 18px;
   top: 27px;
