@@ -83,6 +83,7 @@
   font-size: 17px;
   line-height: 24px;
   color: #000000;
+  align-self: flex-start;
 
   transition: opacity 0.3s;
 
@@ -171,5 +172,9 @@
   &:active {
     background-color: #63d1bb;
     opacity: 0.3;
+  }
+
+  &:focus {
+    background-color: #46c1ae;
   }
 }
