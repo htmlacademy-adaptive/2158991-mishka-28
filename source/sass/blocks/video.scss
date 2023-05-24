@@ -13,8 +13,9 @@
   position: absolute;
   width: 102px;
   height: 76px;
-  left: calc(50% - 51px);
-  top: calc(50% - 38px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   cursor: pointer;
 
   padding: 0;
@@ -23,24 +24,25 @@
 
   &:hover {
     width: calc(102px * 1.2);
-    height: calc(91.2px * 1.2);
-    left: calc(50% - 61.2px);
-    top: calc(50% - 45.6px);
-  }
-
-  &:hover .video__button-icon {
-    width: 100%;
-    height: auto;
+    height: calc(76px * 1.2);
   }
 
   &:active {
     width: calc(102px * 0.8);
-    height: calc(91.2px * 0.8);
-    left: calc(50% - 40.8px);
-    top: calc(50% - 30.4px);
+    height: calc(76px * 0.8);
+  }
+}
+
+.video__button-icon {
+  background: url("../icons/stack.svg#play") no-repeat center center/101px 77px;
+
+  &:hover {
+    transition: 0.3s;
+    background-size: 100%;
   }
 
-  &:active .video__button-icon {
+  &:active {
+    transition: 0.2s;
     opacity: 0.7;
   }
 }

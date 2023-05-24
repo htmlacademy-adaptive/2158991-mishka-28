@@ -78,7 +78,7 @@ const svg = () => {
   .pipe(gulp.dest('build/img'))
 }
 
-export const stack = () => {
+const stack = () => {
   return gulp.src('source/icons/*.svg')
   .pipe(svgo())
   .pipe(stacksvg({
@@ -106,7 +106,7 @@ const copy = (done) => {
 
 //Clean
 
-export const clean = () => {
+const clean = () => {
   return deleteAsync('build');
 }
 
@@ -131,9 +131,26 @@ const watcher = () => {
   gulp.watch('source/*.html').on('change', browser.reload);
 }
 
+//Build
+
+export const build = gulp.series (
+  clean,
+  copy,
+  optimizeimages,
+  gulp.parallel (
+    styles,
+    html,
+    scripts,
+    svg,
+    stack,
+    createWebp
+  )
+);
+
+
 //Default
 
-export default gulp.series(
+export default gulp.series (
   clean,
   copy,
   copyImages,
