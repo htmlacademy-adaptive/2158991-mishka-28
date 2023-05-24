@@ -57,7 +57,8 @@
 
 .production__title--camera::before {
   position: absolute;
-  content: url("../img/icon/camera.svg");
+  content: "";
+  background-image: url("../icons/stack.svg#camera");
   width: 32px;
   height: 22px;
   align-self: center;

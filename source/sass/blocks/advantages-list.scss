@@ -33,20 +33,6 @@
   grid-row: 1;
 }
 
-.advantages-list__item--wool {
-  @media (min-width: variables.$tablet-width) {
-    // padding-top: 1px;
-    // padding-left: 1px;
-  }
-}
-
-.advantages-list__item--rocket {
-  @media (min-width: variables.$tablet-width) {
-    // padding-top: 1px;
-    // padding-left: 1px;
-  }
-}
-
 .advantages-list__item--price,
 .advantages-list__item--rocket {
   grid-row: 2;
@@ -54,7 +40,9 @@
 
 .advantages-list__item--ecology::before {
   position: absolute;
-  content: url("../img/icon/icon-ecology.svg");
+  content: "";
+  mask-image: url("../icons/stack.svg#icon-ecology");
+  background-color: #63d1bb;
   width: 33px;
   height: 38px;
   top: -55px;
@@ -63,7 +51,9 @@
 
 .advantages-list__item--price::before {
   position: absolute;
-  content: url("../img/icon/icon-price.svg");
+  content: "";
+  mask-image: url("../icons/stack.svg#icon-price");
+  background-color: #63d1bb;
   width: 47px;
   height: 27px;
   top: -54px;
@@ -71,7 +61,9 @@
 
 .advantages-list__item--like::before {
   position: absolute;
-  content: url("../img/icon/icon-like.svg");
+  content: "";
+  mask-image: url("../icons/stack.svg#icon-like");
+  background-color: #63d1bb;
   width: 34px;
   height: 27px;
   top: -49px;
@@ -80,7 +72,9 @@
 
 .advantages-list__item--wool::before {
   position: absolute;
-  content: url("../img/icon/icon-wool.svg");
+  content: "";
+  mask-image: url("../icons/stack.svg#icon-wool");
+  background-color: #63d1bb;
   width: 35px;
   height: 34px;
   top: -51px;
@@ -89,7 +83,9 @@
 
 .advantages-list__item--rocket::before {
   position: absolute;
-  content: url("../img/icon/icon-rocket.svg");
+  content: "";
+  mask-image: url("../icons/stack.svg#icon-rocket");
+  background-color: #63d1bb;
   width: 55px;
   height: 23px;
   top: -51px;
@@ -98,7 +94,9 @@
 
 .advantages-list__item--present::before {
   position: absolute;
-  content: url("../img/icon/icon-present.svg");
+  content: "";
+  mask-image: url("../icons/stack.svg#icon-present");
+  background-color: #63d1bb;
   width: 33px;
   height: 32px;
   top: -53px;

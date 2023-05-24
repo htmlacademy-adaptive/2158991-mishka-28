@@ -13,19 +13,18 @@
   @media (min-width: variables.$tablet-width) {
     position: absolute;
     content: "";
-    background: url("../img/zigzag-fill-t.svg");
-    background-position: center;
+    background: url("../icons/stack.svg#zigzag-fill-t") repeat-x center bottom/768px 24px;
     width: 100%;
     height: 24px;
     bottom: -10px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    background: url("../img/zigzag-fill-d.svg");
+    background: url("../icons/stack.svg#zigzag-fill-d") repeat-x center bottom/1150px 34px;
     background-position: center;
     width: 100%;
     height: 34px;
-    bottom: -17px;
+    bottom: -12px;
   }
 }
 

@@ -26,7 +26,19 @@
 .main-footer__logo {
   display: none;
 
+  &:hover .main-footer__logo-icon {
+    fill: #46c1ae;
+  }
+
+  &:active .main-footer__logo-icon {
+    opacity: 0.3;
+  }
+
   @media (min-width: variables.$tablet-width) {
     display: block;
   }
+}
+
+.main-footer__logo-icon {
+  fill: #000000;
 }

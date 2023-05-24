@@ -10,6 +10,7 @@
   position: relative;
   width: 100%;
   display: flex;
+  margin: 0;
 
   @media (min-width: variables.$tablet-width) {
     width: 25%;
@@ -37,6 +38,17 @@
 .form-title__text {
   padding-right: 22px;
   background-color: #ffffff;
+  z-index: 1;
+
+  @media (min-width: variables.$tablet-width) {
+    background-color: transparent;
+  }
+}
+
+.form-title__desk {
+  position: relative;
+  background-color: #ffffff;
+  padding-right: 23px;
   z-index: 1;
 
   @media (min-width: variables.$tablet-width) {
