@@ -23,3 +23,7 @@ button.addEventListener('click',function () {
 window.onclick = function(o){
   o.target == modal && (modal.classList.remove('modal--open'),document.body.style.overflow='')
 };
+
+let map = document.querySelector('.contacts__map-container');
+
+map.classList.remove('contacts__map_nojs');
