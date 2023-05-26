@@ -15,7 +15,9 @@
 
   @media (min-width: variables.$desktop-width) {
     flex-direction: row;
-    gap: 0;
+    flex-wrap: wrap;
+    column-gap: 0;
+    row-gap: 40px;
     justify-content: space-between;
   }
 }

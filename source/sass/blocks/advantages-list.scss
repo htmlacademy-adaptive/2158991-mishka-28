@@ -28,14 +28,40 @@
   }
 }
 
-.advantages-list__item--ecology,
-.advantages-list__item--wool {
-  grid-row: 1;
+.advantages-list__item:nth-child(1) {
+  @media (min-width: variables.$tablet-width) {
+    order: 1;
+  }
 }
 
-.advantages-list__item--price,
-.advantages-list__item--rocket {
-  grid-row: 2;
+.advantages-list__item:nth-child(2) {
+  @media (min-width: variables.$tablet-width) {
+    order: 3;
+  }
+}
+
+.advantages-list__item:nth-child(3) {
+  @media (min-width: variables.$tablet-width) {
+    order: 5;
+  }
+}
+
+.advantages-list__item:nth-child(4) {
+  @media (min-width: variables.$tablet-width) {
+    order: 2;
+  }
+}
+
+.advantages-list__item:nth-child(5) {
+  @media (min-width: variables.$tablet-width) {
+    order: 4;
+  }
+}
+
+.advantages-list__item:nth-child(6) {
+  @media (min-width: variables.$tablet-width) {
+    order: 6;
+  }
 }
 
 .advantages-list__item--ecology::before {

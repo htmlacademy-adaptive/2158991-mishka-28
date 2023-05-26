@@ -97,6 +97,10 @@
   }
 }
 
+.radio__input:focus-visible + .radio__marker {
+  border-color: #62d1ba;
+}
+
 .radio__text {
   padding-top: 4px;
   display: block;

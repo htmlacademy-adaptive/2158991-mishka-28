@@ -8,10 +8,11 @@
   @media (min-width: variables.$tablet-width) {
     position: relative;
     display: grid;
+    grid-template-columns: 46% 1fr;
   }
 
   @media (min-width: variables.$desktop-width) {
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 160px 1fr;
   }
 }
 
@@ -132,12 +133,21 @@
   margin: 0;
 
   @media (min-width: variables.$tablet-width) {
-    position: absolute;
+    justify-self: end;
+    align-items: start;
     display: block;
     right: 0;
     top: 109px;
-    max-width: 45%;
+    width: 100%;
     text-align: end;
     z-index: 1;
+    margin-top: 20px;
+    grid-row: 2;
+    grid-column: 2;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    grid-row: 2;
+    grid-column: 3;
   }
 }
