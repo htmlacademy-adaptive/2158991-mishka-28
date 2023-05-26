@@ -1,0 +1,7 @@
+@use "../global/variables.scss";
+
+.form-container {
+  @media (min-width: variables.$tablet-width) {
+    margin-top: -44px;
+  }
+}

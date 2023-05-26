@@ -1,3 +1,13 @@
+@use "../global/variables.scss";
+
 .main-container {
   min-width: 100%;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-top: -46px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-top: -44px;
+  }
 }

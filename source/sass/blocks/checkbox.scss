@@ -77,6 +77,10 @@
   }
 }
 
+.checkbox__input:focus-visible + .checkbox__marker {
+  border-color: #62d1ba;
+}
+
 .checkbox__marker {
   position: relative;
   display: block;

@@ -28,6 +28,7 @@
 @use "./blocks/main-footer.scss";
 
 // Блоки форма
+@use "./blocks/form-container.scss";
 @use "./blocks/page-header.scss";
 @use "./blocks/filters.scss";
 @use "./blocks/form.scss";
@@ -36,6 +37,7 @@
 @use "./blocks/checkbox.scss";
 
 // Блоки каталог
+@use "./blocks/catalog-container.scss";
 @use "./blocks/catalog.scss";
 @use "./blocks/product.scss";
 @use "./blocks/production.scss";

@@ -5,18 +5,24 @@
 
   @media (min-width: variables.$tablet-width) {
     display: flex;
+    flex-wrap: wrap;
     justify-content: end;
     box-shadow: none;
+    grid-row: 1;
+    grid-column: 2;
   }
 
   @media (min-width: variables.$desktop-width) {
-    order: 2;
+    grid-row: 1;
+    grid-column: 3;
   }
 }
 
 .user-list__item {
   @media (min-width: variables.$tablet-width) {
     border-left: 1px solid #ececec;
+    box-sizing: border-box;
+    min-height: 89px;
   }
 }
 

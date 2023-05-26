@@ -1,0 +1,7 @@
+@use "../global/variables.scss";
+
+.catalog-container {
+  @media (min-width: variables.$tablet-width) {
+    margin-top: -44px;
+  }
+}

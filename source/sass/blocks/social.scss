@@ -2,13 +2,15 @@
 
 .social {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 29px;
   list-style-type: none;
   margin: 0;
-  padding: 27px 0 28px;
+  padding: 27px 50px 28px;
 
   @media (min-width: variables.$tablet-width) {
-    padding: 55px 0 62px;
+    padding: 55px 50px 62px;
   }
 }
 
